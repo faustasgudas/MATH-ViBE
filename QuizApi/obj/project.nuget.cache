@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "CahoVr71a9I=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\faust\\RiderProjects\\QuizApi\\QuizApi\\QuizApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\faust\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
+    "C:\\Users\\faust\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
