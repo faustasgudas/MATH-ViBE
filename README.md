@@ -1,4 +1,4 @@
-# 📘 VBE Matematikos App
+# 📘 MATH ViBE
 
 Edukacinė mobilioji programėlė, skirta padėti Lietuvos mokiniams pasiruošti matematikos VBE egzaminui interaktyviai ir smagiai – be korepetitorių streso.
 
