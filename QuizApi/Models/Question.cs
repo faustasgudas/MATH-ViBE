@@ -9,4 +9,7 @@
         public string Explanation { get; set; } = null!;
         public QuestionType Type { get; set; } = QuestionType.SingleChoice; 
         public int Order { get; set; }
+        
+        public Quiz Quiz { get; set; } = null!;
+        public List<AnswerOption> AnswerOptions { get; set; } = new();
     }
