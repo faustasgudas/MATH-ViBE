@@ -8,7 +8,7 @@ public class Rating
     public int Stars { get; set; } = 0;
     public string? Comment { get; set; } = null;
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    
-    public User? User { get; set; }
-    public Quiz? Quiz { get; set; }
+
+    public User? User { get; set; } = null;
+    public Quiz? Quiz { get; set; } = null;
 }
