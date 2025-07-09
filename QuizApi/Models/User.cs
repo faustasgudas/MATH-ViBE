@@ -6,7 +6,7 @@ public class User
     public string UserName { get; set; }
     public string Email { get; set; }
     public string PasswordHash { get; set; } = null!;
-    public string Role { get; set; } = "student";
+    public UserRole Role { get; set; } = UserRole.Student;
     public DateTime Created { get; set; } =  DateTime.UtcNow;
     public int Xp { get; set; } = 0;
     

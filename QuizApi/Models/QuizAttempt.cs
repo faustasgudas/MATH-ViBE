@@ -7,7 +7,7 @@ public class QuizAttempt
     public Guid QuizId { get; set; }
     public decimal Score { get; set; }
     public DateTime Started { get; set; } = DateTime.UtcNow;
-    public DateTime Completed { get; set; } = DateTime.UtcNow;
+    public DateTime? Completed { get; set; } = DateTime.UtcNow;
     
     public Quiz? Quiz { get; set; } = null!;
     public User? User { get; set; } = null!;
