@@ -10,4 +10,9 @@ public class Quiz
     public int Difficulty { get; set; } // 1-3 (Easy, Medium, Hard)
     public DateTime Created { get; set; } = DateTime.UtcNow;
     public Boolean IsPublished { get; set; } = false;
+    
+    public User Author { get; set; } = null!;
+    public List<Question> Questions { get; set; } = new();
+    public List<Rating> Ratings { get; set; } = new();
+    public List<QuizAttempt> Attempts { get; set; } = new();
 }
