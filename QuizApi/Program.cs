@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using QuizApi.Data;
 using QuizApi.Repositories;
+using QuizApi.Application.Interfaces.Persistence;
+using QuizApi.Application.Services;
+using QuizApi.Application.Interfaces.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,9 @@ builder.Services.AddDbContext<QuizDbContext>(options =>
 
 // Repository Dependency Injection
 builder.Services.AddScoped<IQuizRepository, QuizRepository>();
+builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
+    
+builder.Services.AddScoped<IQuizService, QuizService>(); 
 
 // CORS for Flutter
 builder.Services.AddCors(options =>

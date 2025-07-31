@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using QuizApi.Models;
+using QuizApi.Domain.Entities;
 
 namespace QuizApi.Data
 {

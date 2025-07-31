@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using QuizApi.Data;
-using QuizApi.Models;
+using QuizApi.Domain.Entities;
+using QuizApi.Application.Interfaces.Persistence;
 
 namespace QuizApi.Repositories
 {

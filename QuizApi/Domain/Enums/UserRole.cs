@@ -1,4 +1,4 @@
-namespace QuizApi.Models;
+namespace QuizApi.Domain.Enums;
 
 public enum UserRole
 {

@@ -1,6 +1,6 @@
-using QuizApi.Models;
+using QuizApi.Domain.Entities;
 
-namespace QuizApi.Repositories
+namespace QuizApi.Application.Interfaces.Persistence
 {
     public interface IQuizRepository
     {

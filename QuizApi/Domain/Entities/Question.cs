@@ -1,4 +1,6 @@
-   namespace QuizApi.Models;
+   using QuizApi.Domain.Enums;
+
+   namespace QuizApi.Domain.Entities;
 
     public class Question
     {
