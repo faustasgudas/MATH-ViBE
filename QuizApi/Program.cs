@@ -4,6 +4,7 @@ using QuizApi.Repositories;
 using QuizApi.Application.Interfaces.Persistence;
 using QuizApi.Application.Services;
 using QuizApi.Application.Interfaces.Services;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +19,8 @@ builder.Services.AddDbContext<QuizDbContext>(options =>
 builder.Services.AddScoped<IQuizRepository, QuizRepository>();
 builder.Services.AddScoped<IQuestionRepository, QuestionRepository>();
     
-builder.Services.AddScoped<IQuizService, QuizService>(); 
+builder.Services.AddScoped<IQuizService, QuizService>();
+builder.Services.AddScoped<IQuestionService, QuestionService>();
 
 // CORS for Flutter
 builder.Services.AddCors(options =>
@@ -30,6 +32,15 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader();
     });
 });
+
+// Controllers su JSON opcijomis
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+    });
+
+
 
 // Swagger for testing
 builder.Services.AddEndpointsApiExplorer();
