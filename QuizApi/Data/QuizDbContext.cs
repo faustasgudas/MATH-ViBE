@@ -1,16 +1,18 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using QuizApi.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace QuizApi.Data
 {
-    public class QuizDbContext : DbContext
+    public class QuizDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {
         public QuizDbContext(DbContextOptions<QuizDbContext> options)
             : base(options)
         {
         }
 
-        public DbSet<User> Users { get; set; }
+        // DbSet'ai, išskyrus User (jis paveldėtas iš IdentityDbContext)
         public DbSet<Quiz> Quizzes { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<AnswerOption> AnswerOptions { get; set; }
